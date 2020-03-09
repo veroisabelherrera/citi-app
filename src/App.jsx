@@ -1,12 +1,15 @@
 import React from 'react';
-
-import Profile from './component/Form/form';
 import './App.css';
+import { useUser } from 'reactfire';
+import Login from './component/login/Login';
 
 function App() {
+  const user = useUser;
+
   return (
     <div>
-      <Profile />
+      { !user && <Login /> }
+      { /* user && <Home /> */ }
     </div>
   );
 }
