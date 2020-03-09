@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Form from './component/form'
+import Profile from './component/Form/form'
 import './App.css';
 
 function App() {
   return (
     <div>
-      <Form />
+      <Profile />
     </div>
   );
 }
