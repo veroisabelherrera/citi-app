@@ -1,7 +1,7 @@
 import React from 'react';
 import { useUser } from 'reactfire';
 import './App.css';
-import Login from './component/Login/Login';
+import Login from './component/login/Login';
 
 function App() {
   const user = useUser();
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
         { !user && <Login /> }
-        { user && <Home /> }
+        {/* user && <Home />*/ }
     </div>
   );
 }
