@@ -1,13 +1,13 @@
 import React from 'react';
-import './App.css';
 import { useUser } from 'reactfire';
+import './App.css';
 import Login from './component/login/Login';
 
 function App() {
-  const user = useUser;
+  const user = useUser();
 
   return (
-    <div>
+    <div className="App">
       { !user && <Login /> }
       { /* user && <Home /> */ }
     </div>
