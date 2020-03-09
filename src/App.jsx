@@ -7,7 +7,7 @@ function App() {
   const user = useUser();
 
   return (
-    <div className="App">
+    <div className="App col-12">
       { !user && <Login /> }
       { /* user && <Home /> */ }
     </div>
