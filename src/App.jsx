@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Profile from './component/Form/form'
+import Profile from './component/Form/form';
 import './App.css';
 
 function App() {
