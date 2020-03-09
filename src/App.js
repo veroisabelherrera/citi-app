@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Profile from './component/Form/form'
+import AfterAdmission from './component/AfterAdmission/AfterAdmission'
 import './App.css';
 
 function App() {
   return (
     <div>
-      <Profile />
+      <AfterAdmission />
     </div>
   );
 }

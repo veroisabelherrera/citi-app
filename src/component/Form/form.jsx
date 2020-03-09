@@ -6,13 +6,13 @@ function Form() {
     return (
         <div>
             <form action="">
-                <label for="Name and Lastname">Nombre y Apellido</label>
-                <input type="text" name="Name and Lastname" id="" />
-                <label for="Rut">Rut</label>
-                <input type="number" name="Rut" id="" />
-                <label for="Email">Correo</label>
+                <label htmlFor="Name and Lastname">Nombre y Apellido</label>
+                <input type="text" name="" id="" />
+                <label htmlFor="Rut">Rut</label>
+                <input type="text" name="" id="" />
+                <label htmlFor="Email">Correo</label>
                 <input type="email" name="Email" id="" />
-                <label for="Bank">Banco</label>
+                <label htmlFor="Bank">Banco</label>
                 <select id="bank" name="select">
                     <option value="0">Elige tu Banco</option>
                     <option value="1">Banco Bice</option>

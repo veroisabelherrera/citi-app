@@ -6,11 +6,11 @@ function Profile() {
     return (
         <div>
             <form action="">
-                <label htmlFor="">Nombre y Apellido</label>
+                <label htmlFor="Name and Lastname">Nombre y Apellido</label>
                 <input type="text" name="" id="" />
-                <label htmlFor="">Rut</label>
+                <label htmlFor="Rut">Rut</label>
                 <input type="text" name="" id="" />
-                <label htmlFor="">Correo</label>
+                <label htmlFor="Email">Correo</label>
                 <input type="text" name="" id="" />
                 <select id="bank" name="select">
                     <option value="0">Elige tu Banco</option>
@@ -41,15 +41,13 @@ function Profile() {
                     <option value="2">Cuenta Vista</option>
                     <option value="3">Cuenta Corriente</option>
                 </select>
-                <label htmlFor="">N° de Cuenta </label>
+                <label htmlFor="Account number">N° de Cuenta </label>
                 <input type="text" name="" id="" />
-                <label htmlFor="">N° Whatsapp </label>
+                <label htmlFor="whatsapp">N° Whatsapp </label>
                 <input type="text" name="" id="" />
             </form>
             <button>Enviar</button>
         </div>
     );
-
 }
-
 export default Profile;
