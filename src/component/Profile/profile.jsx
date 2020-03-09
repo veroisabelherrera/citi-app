@@ -1,18 +1,17 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-function Form() {
+function Profile() {
     render()
     return (
         <div>
             <form action="">
-                <label for="Name and Lastname">Nombre y Apellido</label>
-                <input type="text" name="Name and Lastname" id="" />
-                <label for="Rut">Rut</label>
-                <input type="number" name="Rut" id="" />
-                <label for="Email">Correo</label>
-                <input type="email" name="Email" id="" />
-                <label for="Bank">Banco</label>
+                <label htmlFor="">Nombre y Apellido</label>
+                <input type="text" name="" id="" />
+                <label htmlFor="">Rut</label>
+                <input type="text" name="" id="" />
+                <label htmlFor="">Correo</label>
+                <input type="text" name="" id="" />
                 <select id="bank" name="select">
                     <option value="0">Elige tu Banco</option>
                     <option value="1">Banco Bice</option>
@@ -42,11 +41,15 @@ function Form() {
                     <option value="2">Cuenta Vista</option>
                     <option value="3">Cuenta Corriente</option>
                 </select>
-                <label for="Account Number">N° de Cuenta </label>
+                <label htmlFor="">N° de Cuenta </label>
+                <input type="text" name="" id="" />
+                <label htmlFor="">N° Whatsapp </label>
                 <input type="text" name="" id="" />
             </form>
             <button>Enviar</button>
         </div>
     );
+
 }
-export default Form;
+
+export default Profile;
