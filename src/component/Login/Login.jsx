@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp, useUser } from 'reactfire';
 import './Login.css';
-import { H2 } from './../elements/H2';
-import { H4 }  from './../elements/H4';
+import { H2 } from '../elements/H2';
+import { H4 } from '../elements/H4';
 
 
 export default () => {
@@ -28,7 +28,7 @@ export default () => {
         !user
         && (
         <section>
-          <H2>Inicio sesión</H2>
+          <H2>Inicio de sesión</H2>
           <div>
             <H4>Correo</H4>
             <input type="email" id="email" placeholder="Escribe tu correo" className="input-login" onChange={(event) => setEmail(event.target.value)} />

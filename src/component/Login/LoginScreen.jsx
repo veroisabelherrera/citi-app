@@ -3,14 +3,35 @@ import Login from './Login';
 import Register from './Register';
 
 
-export const NextBtn = () => (
-  <div>
-    <Link to="/Register">
-      <img src={Register} className="nav-btn" />
-    </Link>
+function LoginScreen = () => {
+    const registro = useUser();
+    const logged = 
 
-    <Link to="/Login">
-      <img src={Login} className="nav-btn" />
-    </Link>
-  </div>
-);
+    if(logged) {
+        return <Login />
+    }
+    return <Register />
+}
+
+ReactDOM.render(
+    // Intentar cambiando isLoggedIn={true}:
+    <LoginScreen logged={false} />,
+    document.getElementById('root')
+  );
+  
+/*
+function Greeting(props) {
+    const isLoggedIn = props.isLoggedIn;
+    if (isLoggedIn) {
+      return <UserGreeting />;
+    }
+    return <GuestGreeting />;
+  }
+  
+  ReactDOM.render(
+    // Intentar cambiando isLoggedIn={true}:
+    <Greeting isLoggedIn={false} />,
+    document.getElementById('root')
+  );
+
+  */
