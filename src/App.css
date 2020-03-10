@@ -36,3 +36,52 @@ body {
   width: 100%;
   justify-content: center;
 }
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Btn{
+  background-color: royalblue;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 260px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+
+@media (max-width:640px) {
+
+  /*Pantalla Login*/
+
+  .H2Style {
+      font-size: 24px;
+      font-weight: 800;
+  }
+
+  .H4Style {
+      font-size: 18px;
+      font-weight: 600;
+  }
+
+  .Btn{
+      background-color: royalblue;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      width: 260px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      color: #FFFFFF;
+      }
+
+
+}
