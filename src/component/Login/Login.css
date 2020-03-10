@@ -1,26 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro|Raleway&display=swap');
 
 
-.App {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-}
-
-    .Btn{
-    background-color: royalblue;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    width: 260px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    color: #FFFFFF;
-    }
-
-
 
 @media (max-width:640px) {
 
@@ -34,16 +14,6 @@
         width: 100%;
     }
 
-    .H2Style {
-        font-size: 24px;
-        font-weight: 800;
-    }
-
-    .H4Style {
-        font-size: 18px;
-        font-weight: 600;
-    }
-
     .input-login {
         border: 2px solid royalblue;
         border-radius: 10px;
@@ -51,18 +21,5 @@
         padding: 10px;
         width: 260px;
     }
-
-    .Btn{
-        background-color: royalblue;
-        border: none;
-        border-radius: 10px;
-        padding: 10px;
-        width: 260px;
-        font-size: 18px;
-        font-weight: bold;
-        text-align: center;
-        color: #FFFFFF;
-        }
-
 
 }
