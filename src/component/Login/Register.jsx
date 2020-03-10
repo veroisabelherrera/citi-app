@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp, useUser } from 'reactfire';
+import Home from '../home/Home';
 
 
 export default () => {
@@ -14,13 +15,11 @@ export default () => {
     await firebase.auth().createUserWithEmailAndPassword(email, password);
   };
 
-  const logout = async () => {
-    await firebase.auth().signOut();
-  };
-
   return (
     <div>
-      {user && <button type="button" onClick={logout}>Cerrar sesión</button>}
+      {user && (
+        <Home />
+      )}
       {
         !user
         && (
@@ -36,7 +35,7 @@ export default () => {
             <h6 className="h6">Recuérdame</h6>
             <h6 className="h6"><a className="link-login">¿Olvidaste tu contraseña?</a></h6>
           </div>
-          <button type="button" onClick={register} className="btn-login">Crear cuenta</button>
+          <button type="button" onClick={register} className="Btn">Crear cuenta</button>
         </div>
         )
       }
