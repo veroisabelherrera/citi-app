@@ -4,6 +4,7 @@ import { useFirebaseApp, useUser } from 'reactfire';
 import './Login.css';
 import { H2 } from '../elements/H2';
 import { H4 } from '../elements/H4';
+import { Paragraph } from '../elements/Paragraph';
 
 
 export default () => {
@@ -36,7 +37,7 @@ export default () => {
             <input type="password" id="password" placeholder="Escribe contraseña" className="input-login" onChange={(event) => setPassword(event.target.value)} />
           </div>
           <div className="link">
-            <h6 className="h6"><a className="link-login">¿Olvidaste tu contraseña?</a></h6>
+            <Paragraph className="h6"><a className="link-login">¿Olvidaste tu contraseña?</a></Paragraph>
           </div>
           <button type="button" onClick={login} className="Btn">Iniciar sesión</button>
         </section>
