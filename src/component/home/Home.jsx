@@ -15,7 +15,6 @@ export default () => {
     <div className="containe-btn-home">
 
       <button type="button" className="btn-home">Mi Perfil</button>
-      <button type="button" className="btn-home">Pagar Cuentas</button>
       <button type="button" className="btn-home">Transferir</button>
       <button type="button" className="Btn-two" onClick={logout}>Cerrar sesión</button>
 

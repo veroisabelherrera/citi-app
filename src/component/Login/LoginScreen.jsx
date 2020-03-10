@@ -1,37 +1,15 @@
 import React from 'react';
-import Login from './Login';
-import Register from './Register';
+import { Link } from 'react-router-dom';
+import { Button } from '../elements/Button';
 
 
-function LoginScreen = () => {
-    const registro = useUser();
-    const logged = 
-
-    if(logged) {
-        return <Login />
-    }
-    return <Register />
+function LoginScreen() {
+  return (
+    <div>
+      <Link to="/register"><Button>Registrarme</Button></Link>
+      <Link to="/login"><Button>Iniciar sesión</Button></Link>
+    </div>
+  );
 }
 
-ReactDOM.render(
-    // Intentar cambiando isLoggedIn={true}:
-    <LoginScreen logged={false} />,
-    document.getElementById('root')
-  );
-  
-/*
-function Greeting(props) {
-    const isLoggedIn = props.isLoggedIn;
-    if (isLoggedIn) {
-      return <UserGreeting />;
-    }
-    return <GuestGreeting />;
-  }
-  
-  ReactDOM.render(
-    // Intentar cambiando isLoggedIn={true}:
-    <Greeting isLoggedIn={false} />,
-    document.getElementById('root')
-  );
-
-  */
+export default LoginScreen;
