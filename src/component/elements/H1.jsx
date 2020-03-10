@@ -1,5 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-export const H1 = ({children}) => (
-<p className="H1Style">{children}</p>
-)
+export const H1 = ({ children }) => (
+  <p className="H1Style">{children}</p>
+);
