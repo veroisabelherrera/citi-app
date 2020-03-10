@@ -5,7 +5,7 @@ import { Button } from '../elements/Button';
 
 function LoginScreen() {
   return (
-    <div>
+    <div className="nav-login">
       <Link to="/register"><Button>Registrarme</Button></Link>
       <Link to="/login"><Button>Iniciar sesión</Button></Link>
     </div>

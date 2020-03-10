@@ -11,7 +11,7 @@ function App() {
   // const user = useUser();
 
   return (
-    <div>
+    <div className="App">
       <BrowserRouter>
         <>
           <LoginScreen />
