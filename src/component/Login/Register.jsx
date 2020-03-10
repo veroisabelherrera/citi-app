@@ -27,17 +27,17 @@ export default () => {
         !user
         && (
           <section className="form-login-container">
-          <H2>Creación de cuenta</H2>
-          <div>
-            <H4>Correo</H4>
-            <input type="email" id="email" placeholder="Escribe tu correo" className="input-login" onChange={(event) => setEmail(event.target.value)} />
-            <H4>Contraseña</H4>
-            <input type="password" id="password" placeholder="Escribe contraseña" className="input-login" onChange={(event) => setPassword(event.target.value)} />
-          </div>
-          <Link><button type="button" onClick={register} className="Btn">Crear cuenta</button></Link>
-        </section>
+            <H2>Creación de cuenta</H2>
+            <div>
+              <H4>Correo</H4>
+              <input type="email" id="email" placeholder="Escribe tu correo" className="input-login" onChange={(event) => setEmail(event.target.value)} />
+              <H4>Contraseña</H4>
+              <input type="password" id="password" placeholder="Escribe contraseña" className="input-login" onChange={(event) => setPassword(event.target.value)} />
+            </div>
+            <Link><button type="button" onClick={register} className="Btn">Crear cuenta</button></Link>
+          </section>
         )
     }
     </div>
-    );
+  );
 };
