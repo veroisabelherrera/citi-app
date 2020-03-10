@@ -22,14 +22,14 @@ export default () => {
 
 
   return (
-    <div className="container-login col-12">
+    <div className="login-container">
       {user && (
         <Home />
       )}
       {
         !user
         && (
-        <section>
+        <section className="form-login-container">
           <H2>Inicio de sesión</H2>
           <div>
             <H4>Correo</H4>
