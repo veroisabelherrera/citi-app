@@ -1,10 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import './Form.css';
 
 function Form() {
   render();
   return (
-    <div>
+    <div className="form-container">
       <form action="">
         <label htmlFor="Name and Lastname">Nombre y Apellido</label>
         <input type="text" name="Name and Lastname" id="" />
@@ -45,7 +46,7 @@ function Form() {
         <label htmlFor="Account Number">N° de Cuenta </label>
         <input type="text" name="" id="" />
       </form>
-      <button>Enviar</button>
+      <button type="button" className="Btn">Enviar</button>
     </div>
   );
 }
