@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const Button = ({ children }) => (
-  <button type="submit" className="Btn" onClick={children}>{children}</button>
+  <button type="submit" className="Btn-second" onClick={children}>{children}</button>
 );
