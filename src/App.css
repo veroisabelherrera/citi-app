@@ -8,9 +8,11 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+}
+
+.nav-login {
+  align-items: center;
 }
 
 .H2Style {
