@@ -7,19 +7,22 @@ body {
 
 .App {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   width: 100%;
 }
 
+.nav-login {
+  align-items: center;
+}
+
 .H2Style {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
   letter-spacing: 1px;
 }
 
 .H4Style {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -30,10 +33,25 @@ body {
   border-radius: 10px;
   padding: 10px;
   width: 260px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   color: #FFFFFF;
+  letter-spacing: 1px;
+  margin: 20px;
+}
+
+.Btn-second {
+  background-color: darkblue;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 260px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #FFFFFF;
+  letter-spacing: 1px;
 }
 
 
@@ -63,6 +81,7 @@ body {
       font-weight: bold;
       text-align: center;
       color: #FFFFFF;
+      letter-spacing: 1px;
       }
 
 
