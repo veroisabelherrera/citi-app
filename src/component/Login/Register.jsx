@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp, useUser } from 'reactfire';
-import './Login.css';
-import { H2 } from '../elements/H2';
-import { H4 } from '../elements/H4';
 
 
 export default () => {
@@ -13,8 +10,8 @@ export default () => {
   const firebase = useFirebaseApp();
   const user = useUser();
 
-  const login = async () => {
-    await firebase.auth().signInWithEmailAndPassword(email, password);
+  const register = async () => {
+    await firebase.auth().createUserWithEmailAndPassword(email, password);
   };
 
   const logout = async () => {
@@ -22,24 +19,25 @@ export default () => {
   };
 
   return (
-    <div className="container-login col-12">
-      {user && <button type="button" className="btn-logout" onClick={logout}>Cerrar sesión</button>}
+    <div>
+      {user && <button type="button" onClick={logout}>Cerrar sesión</button>}
       {
         !user
         && (
-        <section>
-          <H2>Inicio de sesión</H2>
+        <div>
+          <h3 className="login-h3">Crear cuenta</h3>
           <div>
-            <H4>Correo</H4>
+            <h5>Correo</h5>
             <input type="email" id="email" placeholder="Escribe tu correo" className="input-login" onChange={(event) => setEmail(event.target.value)} />
-            <H4>Contraseña</H4>
+            <h5>Contraseña</h5>
             <input type="password" id="password" placeholder="Escribe contraseña" className="input-login" onChange={(event) => setPassword(event.target.value)} />
           </div>
-          <div className="link">
+          <div className="section-6">
+            <h6 className="h6">Recuérdame</h6>
             <h6 className="h6"><a className="link-login">¿Olvidaste tu contraseña?</a></h6>
           </div>
-          <button type="button" onClick={login} className="Btn">Iniciar sesión</button>
-        </section>
+          <button type="button" onClick={register} className="btn-login">Crear cuenta</button>
+        </div>
         )
       }
     </div>

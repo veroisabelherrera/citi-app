@@ -1,0 +1,31 @@
+
+.containe-btn-home {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rebeccapurple;
+    padding: 20px;
+}
+
+.btn-home {
+    background-color: royalblue;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    height: 100px;
+    margin: 20px;
+    width: 100px;
+}
+
+.Btn-two {
+    background-color: crimson;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 180px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px;
+}
