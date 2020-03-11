@@ -1,7 +1,7 @@
 import React from 'react';
 import { useUser } from 'reactfire';
 import './App.css';
-import LoginScreen from './component/login/LoginScreen';
+import LoginScreen from './component/Login/LoginScreen';
 import Home from './component/home/Home';
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
 
   return (
     <div className="App">
-      { !user && <LoginScreen /> }
-      { user && <Home /> }
+      {!user && <LoginScreen />}
+      {user && <Home />}
     </div>
   );
 }
