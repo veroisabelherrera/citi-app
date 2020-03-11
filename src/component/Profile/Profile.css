@@ -6,21 +6,10 @@
     align-items: center;
   }
   
-  .items-container {
-    align-items: center;
-  }
-  
   .title {
     font-size: 26px;
     font-weight: 800;
     letter-spacing: 1px;
-  }
-  
-  .H3 {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 0;
-    margin-top: 20px;
   }
   
   .input {
@@ -28,23 +17,11 @@
     border-radius: 10px;
     font-size: 14px;
     padding: 8px;
-    width: 320px;
+    width: 40vh;
   }
   
-  .Btn{
-    background-color: royalblue;
-    border: none;
-    border-radius: 10px;
-    padding: 8px;
-    width: 140px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    color: #FFFFFF;
-    letter-spacing: 1px;
-    margin: 20px;
-  }
   
   @media (max-width:640px) {
   
+
   }

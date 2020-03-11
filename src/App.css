@@ -27,6 +27,14 @@ body {
   letter-spacing: 1px;
 }
 
+.H3Style {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+
 .Btn{
   background-color: royalblue;
   border: none;

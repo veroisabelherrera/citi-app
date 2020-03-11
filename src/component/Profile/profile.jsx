@@ -41,21 +41,21 @@ const AddForm = () => {
       <section>
         <div>
           <p className="title">Por favor, ingresa tus datos bancarios</p>
-          <H3 className="H3">Nombre y Apellido</H3>
+          <H3>Nombre y Apellido</H3>
           <input
             className="input"
             type="text"
             value={name}
             onChange={(e) => setName(e.currentTarget.value)}
           />
-          <H3 className="H3">Rut</H3>
+          <H3>Rut</H3>
           <input
             className="input"
             type="text"
             value={rut}
             onChange={(e) => setRut(e.currentTarget.value)}
           />
-          <H3 className="H3">Correo electrónico</H3>
+          <H3>Correo electrónico</H3>
           <input
             className="input"
             type="text"
@@ -63,7 +63,7 @@ const AddForm = () => {
             onChange={(e) => setEmail(e.currentTarget.value)}
           />
           <br />
-          <H3 className="H3">Banco</H3>
+          <H3>Banco</H3>
           <select
             className="input"
             value={bank}
@@ -80,7 +80,7 @@ const AddForm = () => {
             }
           </select>
           <br />
-          <H3 className="H3">Tipo de cuenta</H3>
+          <H3>Tipo de cuenta</H3>
           <select
             className="input"
             value={typeAccount}
@@ -94,7 +94,7 @@ const AddForm = () => {
             }
           </select>
           <br />
-          <H3 className="H3">Número de cuenta</H3>
+          <H3>Número de cuenta</H3>
           <input
             className="input"
             type="text"
