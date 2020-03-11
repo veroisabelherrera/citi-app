@@ -1,8 +1,13 @@
 import React from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { Route } from 'react-router';
+import Profile from '../Profile/profile'
+import Transfer from '../Transfer/transfer'
 import './Home.css';
 import 'firebase/auth';
 import { useFirebaseApp } from 'reactfire';
 import './Home.css';
+
 
 
 export default () => {
@@ -14,10 +19,16 @@ export default () => {
 
   return (
     <div className="containe-btn-home">
-      <button type="button" className="btn-home">Mi Perfil</button>
-      <button type="button" className="btn-home">Transferir</button>
-      <button type="button" className="Btn-two" onClick={logout}>Cerrar sesión</button>
+      <BrowserRouter>
+        <>
+          <Link to="/Profile"><button type="button" className="btn-home">Mi Perfil</button></Link>
+          <Link to="/Transfer"><button type="button" className="btn-home">Transferir</button></Link>
+          <button type="button" className="Btn-two" onClick={logout}>Cerrar sesión</button>
 
+          <Route exact path="/Profile" component={Profile} />
+          <Route exact path="/Transfer" component={Transfer} />
+        </>
+      </BrowserRouter>
     </div>
   );
 };
