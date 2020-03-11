@@ -12,7 +12,6 @@ function App() {
     <div className="App">
       {!user && <LoginScreen />}
       {user && <Home />}
-      <Contact />
     </div>
   );
 }
