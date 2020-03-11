@@ -25,8 +25,8 @@ export default () => {
           <Link to="/Transfer"><button type="button" className="btn-home">Transferir</button></Link>
           <button type="button" className="Btn-two" onClick={logout}>Cerrar sesión</button>
 
-          <Route exact path="/Profile" component={Profile} />
-          <Route exact path="/Transfer" component={Transfer} />
+          <Route path="/Profile" component={Profile} />
+          <Route path="/Transfer" component={Transfer} />
         </>
       </BrowserRouter>
     </div>
