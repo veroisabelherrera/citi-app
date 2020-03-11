@@ -3,6 +3,7 @@ import { useUser } from 'reactfire';
 import './App.css';
 import LoginScreen from './component/Login/LoginScreen';
 import Home from './component/home/Home';
+import Contact from './component/contact/Contact';
 
 function App() {
   const user = useUser();
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       {!user && <LoginScreen />}
       {user && <Home />}
+      <Contact />
     </div>
   );
 }
