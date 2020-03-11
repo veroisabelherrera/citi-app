@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp, useUser } from 'reactfire';
 import './Login.css';
+import { Link } from 'react-router-dom';
 import { H2 } from '../elements/H2';
 import { H4 } from '../elements/H4';
+import { Paragraph } from '../elements/Paragraph';
+import Home from '../home/Home';
 
 
 export default () => {
@@ -17,17 +20,16 @@ export default () => {
     await firebase.auth().signInWithEmailAndPassword(email, password);
   };
 
-  const logout = async () => {
-    await firebase.auth().signOut();
-  };
 
   return (
-    <div className="container-login col-12">
-      {user && <button type="button" className="btn-logout" onClick={logout}>Cerrar sesión</button>}
+    <div className="login-container">
+      {user && (
+        <Home />
+      )}
       {
         !user
         && (
-        <section>
+        <section className="form-login-container">
           <H2>Inicio de sesión</H2>
           <div>
             <H4>Correo</H4>
@@ -36,9 +38,9 @@ export default () => {
             <input type="password" id="password" placeholder="Escribe contraseña" className="input-login" onChange={(event) => setPassword(event.target.value)} />
           </div>
           <div className="link">
-            <h6 className="h6"><a className="link-login">¿Olvidaste tu contraseña?</a></h6>
+            <Paragraph className="h6"><a className="link-login">¿Olvidaste tu contraseña?</a></Paragraph>
           </div>
-          <button type="button" onClick={login} className="Btn">Iniciar sesión</button>
+          <Link><button type="button" onClick={login} className="Btn">Iniciar sesión</button></Link>
         </section>
         )
       }

@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp, useUser } from 'reactfire';
+import { Link } from 'react-router-dom';
+import { H2 } from '../elements/H2';
+import { H4 } from '../elements/H4';
+import Home from '../home/Home';
 
 
 export default () => {
@@ -14,32 +18,26 @@ export default () => {
     await firebase.auth().createUserWithEmailAndPassword(email, password);
   };
 
-  const logout = async () => {
-    await firebase.auth().signOut();
-  };
-
   return (
     <div>
-      {user && <button type="button" onClick={logout}>Cerrar sesión</button>}
+      {user && (
+        <Home />
+      )}
       {
         !user
         && (
-        <div>
-          <h3 className="login-h3">Crear cuenta</h3>
-          <div>
-            <h5>Correo</h5>
-            <input type="email" id="email" placeholder="Escribe tu correo" className="input-login" onChange={(event) => setEmail(event.target.value)} />
-            <h5>Contraseña</h5>
-            <input type="password" id="password" placeholder="Escribe contraseña" className="input-login" onChange={(event) => setPassword(event.target.value)} />
-          </div>
-          <div className="section-6">
-            <h6 className="h6">Recuérdame</h6>
-            <h6 className="h6"><a className="link-login">¿Olvidaste tu contraseña?</a></h6>
-          </div>
-          <button type="button" onClick={register} className="btn-login">Crear cuenta</button>
-        </div>
+          <section className="form-login-container">
+            <H2>Creación de cuenta</H2>
+            <div>
+              <H4>Correo</H4>
+              <input type="email" id="email" placeholder="Escribe tu correo" className="input-login" onChange={(event) => setEmail(event.target.value)} />
+              <H4>Contraseña</H4>
+              <input type="password" id="password" placeholder="Escribe contraseña" className="input-login" onChange={(event) => setPassword(event.target.value)} />
+            </div>
+            <Link><button type="button" onClick={register} className="Btn">Crear cuenta</button></Link>
+          </section>
         )
-      }
+    }
     </div>
   );
 };
