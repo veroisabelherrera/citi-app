@@ -1,54 +1,113 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import React, { useState } from 'react';
+import db from '../../firebase-config';
+import './Profile.css';
+import { H3 } from '../elements/H3';
 
-function Profile() {
-  render();
+const account = [{ id: 0, name: 'Cuenta Corriente' }, { id: 1, name: 'Chequera electronica' }, { id: 2, name: 'Cuenta de ahorro' }, { id: 3, name: 'Cuenta Vista' }, { id: 4, name: 'Cuenta Rut' }];
+
+const databank = [{ id: 0, name: 'Bancoestado' }, { id: 1, name: 'Coopeuch' }, { id: 2, name: 'Banco BBVA' }, { id: 3, name: 'Banco Consorcio' }, { id: 4, name: 'Banco Ripley' }, { id: 5, name: 'Banco Falabella' }, { id: 6, name: 'Banco Segurity' }, { id: 7, name: 'Banco Itau' }, { id: 8, name: 'Banco Santander' }, { id: 9, name: 'Scotiabank Chile' }];
+
+const AddForm = () => {
+  const [name, setName] = useState('');
+  const [rut, setRut] = useState('');
+  const [email, setEmail] = useState('');
+  const [bank, setBank] = useState(-1);
+  const [typeAccount, setTypeAccount] = useState(-1);
+  const [numberAccount, setNumberAccount] = useState('');
+
+  function addform(e) {
+    e.preventDefault();
+    db.collection('Perfil')
+      .add({
+        name,
+        rut,
+        email,
+        bank,
+        typeAccount,
+        numberAccount,
+      })
+      .then(() => {
+        setName('');
+        setRut('');
+        setEmail('');
+        setBank('');
+        setTypeAccount('');
+        setNumberAccount('');
+      });
+  }
+
   return (
-    <div>
-      <form action="">
-        <label htmlFor="">Nombre y Apellido</label>
-        <input type="text" name="" id="" />
-        <label htmlFor="">Rut</label>
-        <input type="text" name="" id="" />
-        <label htmlFor="">Correo</label>
-        <input type="text" name="" id="" />
-        <select id="bank" name="select">
-          <option value="0">Elige tu Banco</option>
-          <option value="1">Banco Bice</option>
-          <option value="2">BBVA</option>
-          <option value="3">Banco Consorcio</option>
-          <option value="4">Banco de Chile - Edwards Citi</option>
-          <option value="5">Banco Del Desarrollo</option>
-          <option value="6">Banco Estado</option>
-          <option value="7">Banco Falabella</option>
-          <option value="8">Banco Internacional</option>
-          <option value="9">Banco Itaú</option>
-          <option value="10">Banco Paris</option>
-          <option value="11">Banco Ripley</option>
-          <option value="12">Banco Santander - Banefe</option>
-          <option value="13">Banco Security</option>
-          <option value="14">Bci - Tbanc - Nova</option>
-          <option value="15">Coopeuch</option>
-          <option value="16">Corpbanca</option>
-          <option value="17">HSBC Bank</option>
-          <option value="18">Los Héroes</option>
-          <option value="11">Scotiabank</option>
-        </select>
-        <label htmlFor="Account Type">Tipo de Cuenta</label>
-        <select name="account-type" id="">
-          <option value="0">Elige el tipo de cuenta</option>
-          <option value="1">Cuenta de Ahorro</option>
-          <option value="2">Cuenta Vista</option>
-          <option value="3">Cuenta Corriente</option>
-        </select>
-        <label htmlFor="">N° de Cuenta </label>
-        <input type="text" name="" id="" />
-        <label htmlFor="">N° Whatsapp </label>
-        <input type="text" name="" id="" />
-      </form>
-      <button>Enviar</button>
-    </div>
-  );
-}
+    <form className="bankform" onSubmit={addform}>
+      <section>
+        <div>
+          <p className="title">Por favor, ingresa tus datos bancarios</p>
+          <H3 className="H3">Nombre y Apellido</H3>
+          <input
+            className="input"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.currentTarget.value)}
+          />
+          <H3 className="H3">Rut</H3>
+          <input
+            className="input"
+            type="text"
+            value={rut}
+            onChange={(e) => setRut(e.currentTarget.value)}
+          />
+          <H3 className="H3">Correo electrónico</H3>
+          <input
+            className="input"
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.currentTarget.value)}
+          />
+          <br />
+          <H3 className="H3">Banco</H3>
+          <select
+            className="input"
+            value={bank}
+            onChange={(e) => setBank((e.currentTarget.value))}
+          >
 
-export default Profile;
+            <option value={-1}>Seleccione Banco</option>
+            {
+              databank.map((item) => (
+                <option key={item.id} value={item.name}>
+                  {item.name}
+                </option>
+              ))
+            }
+          </select>
+          <br />
+          <H3 className="H3">Tipo de cuenta</H3>
+          <select
+            className="input"
+            value={typeAccount}
+            onChange={(e) => setTypeAccount((e.currentTarget.value))}
+          >
+            <option value={-1}>Seleccione tipo de Cuenta</option>
+            {
+              account.map((item) => (
+                <option key={item.id} value={item.name}>{item.name}</option>
+              ))
+            }
+          </select>
+          <br />
+          <H3 className="H3">Número de cuenta</H3>
+          <input
+            className="input"
+            type="text"
+            value={numberAccount}
+            onChange={(e) => setNumberAccount(e.currentTarget.value)}
+          />
+        </div>
+      </section>
+      <br />
+      <button className="Btn">Guardar</button>
+    </form>
+  );
+};
+export default AddForm;
+
+// firebase deploy --only hosting:citi-app, datos-bancarios
