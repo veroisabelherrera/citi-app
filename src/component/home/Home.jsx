@@ -21,8 +21,8 @@ export default () => {
     <div className="containe-btn-home">
       <BrowserRouter>
         <>
-          <Link to="/Profile"><button type="button" className="btn-home">Mi Perfil</button></Link>
-          <Link to="/Transfer"><button type="button" className="btn-home">Transferir</button></Link>
+          <Link to="/Profile" type="button" className="btn-home">Mi Perfil</Link>
+          <Link to="/Transfer" type="button" className="btn-home">Transferir</Link>
           <button type="button" className="Btn-two" onClick={logout}>Cerrar sesión</button>
 
           <Route path="/Profile" component={Profile} />

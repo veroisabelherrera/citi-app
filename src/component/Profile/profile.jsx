@@ -6,12 +6,12 @@ function Profile() {
   return (
     <div>
       <form action="">
-        <label htmlFor="">Nombre y Apellido</label>
-        <input type="text" name="" id="" />
-        <label htmlFor="">Rut</label>
-        <input type="text" name="" id="" />
-        <label htmlFor="">Correo</label>
-        <input type="text" name="" id="" />
+        <label >Nombre y Apellido</label>
+        <input placeholder="Escribe tu nombre y apellido" type="text" name="" id="" />
+        <label >Rut</label>
+        <input placeholder="Escribe tu rut" type="text" name="" id="" />
+        <label >Correo</label>
+        <input placeholder="Escribe tu correo" type="text" name="" id="" />
         <select id="bank" name="select">
           <option value="0">Elige tu Banco</option>
           <option value="1">Banco Bice</option>
@@ -41,10 +41,10 @@ function Profile() {
           <option value="2">Cuenta Vista</option>
           <option value="3">Cuenta Corriente</option>
         </select>
-        <label htmlFor="">N° de Cuenta </label>
-        <input type="text" name="" id="" />
-        <label htmlFor="">N° Whatsapp </label>
-        <input type="text" name="" id="" />
+        <label htmlFor="">Número de Cuenta </label>
+        <input placeholder="Escribe tu numero de cuenta" type="text" name="" id="" />
+        <label htmlFor="">Número de Whatsapp </label>
+        <input placeholder="Escribe tu numero de whatsapp" type="text" name="" id="" />
       </form>
       <button>Enviar</button>
     </div>
