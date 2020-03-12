@@ -1,7 +1,7 @@
 import React from 'react';
 import { useUser, useFirebaseApp } from 'reactfire';
 import './App.css';
-import LoginScreen from './component/login/LoginScreen';
+import LoginScreen from './component/Login/LoginScreen';
 import { Link } from 'react-router-dom';
 import Routing from './component/Routing';
 import 'firebase/auth';
@@ -24,10 +24,10 @@ function App() {
       <Routing />
       {user
         && (
-        <div className="nav-buttons">
-          <Link to="/login"><button className="Btn-back">Volver al home</button></Link>
-          <button type="button" className="Btn-logut" onClick={logout}>Cerrar sesión</button>
-        </div>
+          <div className="nav-buttons">
+            <Link to="/login"><button className="Btn-back">Volver al home</button></Link>
+            <button type="button" className="Btn-logut" onClick={logout}>Cerrar sesión</button>
+          </div>
         )}
 
     </section>
