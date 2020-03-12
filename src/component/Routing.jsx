@@ -1,18 +1,18 @@
 import React from 'react';
 // import { useUser } from 'reactfire';
 import { Switch, Route } from 'react-router-dom';
-import Profile from './profile/profile';
+import Profile from './Profile/profile';
 import Transfer from './Transfer/transfer';
-import LoginScreen from './login/LoginScreen';
-import Login from './login/Login';
-import Register from './login/Register';
+import LoginScreen from './Login/LoginScreen';
+import Login from './Login/Login';
+import Register from './Login/Register';
 //import ContactView from './contact/Contact';
-import Form from './form/form';
+import Form from './Form/form';
 import ContactScreen from './contact/ContactScreen';
 
 
 export default () => (
-// const user = useUser();
+  // const user = useUser();
 
   <div className="App">
 
