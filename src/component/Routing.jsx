@@ -6,7 +6,9 @@ import Transfer from './Transfer/transfer';
 import LoginScreen from './login/LoginScreen';
 import Login from './login/Login';
 import Register from './login/Register';
-import ContactView from './contact/Contact';
+//import ContactView from './contact/Contact';
+import Form from './form/form';
+import ContactScreen from './contact/ContactScreen';
 
 
 export default () => (
@@ -20,7 +22,8 @@ export default () => (
       <Route exact path="/login" component={Login} />
       <Route exact path="/Profile" component={Profile} />
       <Route exact path="/Transfer" component={Transfer} />
-      <Route exact path="/contacts" component={ContactView} />
+      <Route exact path="/contacts" component={ContactScreen} />
+      <Route exact path="/form" component={Form} />
     </Switch>
 
   </div>
