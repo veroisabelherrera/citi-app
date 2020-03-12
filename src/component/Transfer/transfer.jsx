@@ -8,7 +8,7 @@ function Transfer() {
     <section className="container-btn-home">
 
       <Link to="/Profile"><button type="button" className="btn-home">Compartir Formulario</button></Link>
-      <Link to="/Profile"><button type="button" className="btn-home">Mis contactos</button></Link>
+      <Link to="/contacts"><button type="button" className="btn-home">Mis contactos</button></Link>
 
     </section>
   );
