@@ -14,6 +14,6 @@ export default () => (
     </div>
 
     <Link to="/Profile"><button type="button" className="btn-home">Mi Perfil</button></Link>
-    <Link to="/Transfer"><button type="button" className="btn-home">Transferir</button></Link>
+    <Link to="/contacts"><button type="button" className="btn-home">Transferir</button></Link>
   </section>
 );
