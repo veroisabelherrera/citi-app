@@ -3,7 +3,7 @@ import { useUser } from 'reactfire';
 import './App.css';
 import LoginScreen from './component/Login/LoginScreen';
 import Home from './component/home/Home';
-import Contact from './component/contact/Contact';
+//import Contact from './component/contact/Contact';
 //import InfoContact from './component/contact/InfoContact';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       {!user && <LoginScreen />}
       {user && <Home />}
-      <Contact />
+
 
     </div>
   );
