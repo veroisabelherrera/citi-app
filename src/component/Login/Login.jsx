@@ -24,7 +24,7 @@ export default () => {
   return (
     <div className="login-container">
       {user && (
-        <Home />
+        <Link to="/home" component={Home} />
       )}
       {
         !user

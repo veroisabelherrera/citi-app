@@ -1,0 +1,33 @@
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bankform {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  
+  .title {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  
+  .input {
+    border: 2px solid royalblue;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 8px;
+    width: 40vh;
+  }
+  
+  
+  @media (max-width:640px) {
+  
+
+  }
