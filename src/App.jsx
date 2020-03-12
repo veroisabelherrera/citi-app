@@ -1,12 +1,11 @@
 import React from 'react';
 import { useUser, useFirebaseApp } from 'reactfire';
 import './App.css';
+import LoginScreen from './component/Login/LoginScreen';
 import { Link } from 'react-router-dom';
 import LoginScreen from './component/login/LoginScreen';
 import Routing from './component/Routing';
 import 'firebase/auth';
-
-import { Button } from './component/elements/Button';
 
 
 function App() {
@@ -19,6 +18,7 @@ function App() {
   };
 
   return (
+
     <section className="App">
       {!user && <LoginScreen />}
 
