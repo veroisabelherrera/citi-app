@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "citi-prueba"
+
+    "default": "citi-app"
+
   }
 }

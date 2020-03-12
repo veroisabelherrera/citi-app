@@ -1,8 +1,8 @@
 
 body {
   display: flex;
+ justify-content: center;
   width: 100%;
-  justify-content: center;
 }
 
 .App {
@@ -13,6 +13,16 @@ body {
 
 .nav-login {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-buttons {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
 }
 
 .H2Style {
@@ -27,37 +37,76 @@ body {
   letter-spacing: 1px;
 }
 
+
+.H3Style {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
 .Btn{
   background-color: royalblue;
   border: none;
   border-radius: 10px;
-  padding: 10px;
-  width: 260px;
+  color: #FFFFFF;
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
-  color: #FFFFFF;
   letter-spacing: 1px;
   margin: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 260px;
 }
+
 
 .Btn-second {
   background-color: darkblue;
   border: none;
   border-radius: 10px;
-  padding: 10px;
-  width: 260px;
+
+  color: #FFFFFF;
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
-  color: #FFFFFF;
   letter-spacing: 1px;
+  padding: 10px;
+  text-align: center;
+  width: 260px;
+}
+
+.Btn-back {
+  background-color: darkblue;
+  border: none;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.Btn-logut {
+  background-color: crimson;
+  border: none;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 20px;
+  padding: 10px;
+  width: 200px;
 }
 
 
 
 
 @media (max-width:640px) {
+  .nav-buttons {
+    align-items: center;
+  }
 
   .H2Style {
       font-size: 24px;
@@ -75,14 +124,12 @@ body {
       background-color: royalblue;
       border: none;
       border-radius: 10px;
-      padding: 10px;
-      width: 260px;
+      color: #FFFFFF;
       font-size: 18px;
       font-weight: bold;
-      text-align: center;
-      color: #FFFFFF;
       letter-spacing: 1px;
+      padding: 10px;
+      text-align: center;
+      width: 260px;
       }
-
-
 }

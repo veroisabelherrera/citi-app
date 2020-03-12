@@ -24,24 +24,28 @@ export default () => {
   return (
     <div className="login-container">
       {user && (
-        <Home />
+
+        <Link to="/home" component={Home} />
+
       )}
       {
         !user
         && (
-          <section className="form-login-container">
-            <H2>Inicio de sesión</H2>
-            <div>
-              <H4>Correo</H4>
-              <input type="email" id="email" placeholder="Escribe tu correo" className="input-login" onChange={(event) => setEmail(event.target.value)} />
-              <H4>Contraseña</H4>
-              <input type="password" id="password" placeholder="Escribe contraseña" className="input-login" onChange={(event) => setPassword(event.target.value)} />
-            </div>
-            <div className="link">
-              <Paragraph className="h6"><div className="link-login">¿Olvidaste tu contraseña?</div></Paragraph>
-            </div>
-            <Link><button type="button" onClick={login} className="Btn">Iniciar sesión</button></Link>
-          </section>
+
+        <section className="form-login-container">
+          <H2>Inicio de sesión</H2>
+          <div>
+            <H4>Correo</H4>
+            <input type="email" id="email" placeholder="Escribe tu correo" className="input-login" onChange={(event) => setEmail(event.target.value)} />
+            <H4>Contraseña</H4>
+            <input type="password" id="password" placeholder="Escribe contraseña" className="input-login" onChange={(event) => setPassword(event.target.value)} />
+          </div>
+          <div className="link">
+            <Paragraph className="h6"><a className="link-login">¿Olvidaste tu contraseña?</a></Paragraph>
+          </div>
+          <Link><button type="button" onClick={login} className="Btn">Iniciar sesión</button></Link>
+        </section>
+
         )
       }
     </div>
