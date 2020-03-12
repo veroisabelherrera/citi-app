@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import db from '../../firebase-config';
 import './Form.css';
 import { H3 } from '../elements/H3';
+import { Link } from 'react-router-dom';
 
 const account = [{ id: 0, name: 'Cuenta Corriente' }, { id: 1, name: 'Chequera electronica' }, { id: 2, name: 'Cuenta de ahorro' }, { id: 3, name: 'Cuenta Vista' }, { id: 4, name: 'Cuenta Rut' }];
 
@@ -103,7 +104,7 @@ const AddForm = () => {
           />
         </div>
         </form>
-      <button className="Btn">Guardar</button>
+        <Link to="/login"><button className="Btn">Guardar</button></Link>
       </section>
   );
 };
