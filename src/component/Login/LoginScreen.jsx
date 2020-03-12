@@ -6,19 +6,15 @@ import Login from './Login';
 import Register from './Register';
 
 
+
 function LoginScreen() {
   return (
-    <div className="nav-login">
-      <BrowserRouter>
-        <>
+    <section className="nav-login">
+     
           <Link to="/register"><Button>Registrarme</Button></Link>
           <Link to="/login"><Button>Iniciar sesión</Button></Link>
 
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
-        </>
-      </BrowserRouter>
-    </div>
+    </section>
   );
 }
 
