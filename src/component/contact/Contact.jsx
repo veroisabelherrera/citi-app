@@ -34,7 +34,7 @@ const ContactView = () => {
     <div>
       {contact.map((Contact, i) =>
         <div key={i}>
-          <button onClick={() => { infoContact(Contact) }}> <h3>{Contact.name}</h3>
+          <button className="btn-contact" onClick={() => { infoContact(Contact) }}> <h3>{Contact.name}</h3>
             <p>{Contact.bank}</p></button>
         </div>
       )}
