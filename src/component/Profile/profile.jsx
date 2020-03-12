@@ -37,8 +37,8 @@ const AddForm = () => {
   }
 
   return (
+    <section className="form-container">
     <form className="bankform" onSubmit={addform}>
-      <section>
         <div>
           <p className="title">Por favor, ingresa tus datos bancarios</p>
           <H3>Nombre y Apellido</H3>
@@ -102,10 +102,9 @@ const AddForm = () => {
             onChange={(e) => setNumberAccount(e.currentTarget.value)}
           />
         </div>
-      </section>
-      <br />
+        </form>
       <button className="Btn">Guardar</button>
-    </form>
+      </section>
   );
 };
 export default AddForm;
