@@ -45,9 +45,9 @@ body {
 }
 
 .Btn{
-  background-color: royalblue;
+  background-color: #222222;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   color: #FFFFFF;
   font-size: 20px;
   font-weight: bold;
@@ -61,7 +61,7 @@ body {
 .Btn-second {
   background-color: darkblue;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   color: #FFFFFF;
   font-size: 20px;
   font-weight: bold;
@@ -72,29 +72,29 @@ body {
 }
 
 .Btn-back {
-  background-color: darkblue;
+  background-color: #222222;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
   padding: 10px;
   text-align: center;
-  width: 200px;
+  width: 260px;
 }
 
 .Btn-logut {
-  background-color: crimson;
+  background-color: gray;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
   margin: 20px;
   padding: 10px;
-  width: 200px;
+  width: 260px;
 }
 
 
@@ -119,9 +119,9 @@ body {
   }
 
   .Btn{
-      background-color: royalblue;
+      background-color: #222222;
       border: none;
-      border-radius: 10px;
+      border-radius: 25px;
       color: #FFFFFF;
       font-size: 18px;
       font-weight: bold;

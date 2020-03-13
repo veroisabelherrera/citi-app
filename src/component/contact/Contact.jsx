@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import db from '../../firebase-config';
-import infoContact from './InfoContact';
+
 
 function Contact() {
   let [contact, setContact] = useState([])
@@ -18,25 +19,21 @@ function Contact() {
   }, [])
   return contact
 }
-//const deleteContact = () => {
-//const contact = Contact()
-//db.collection('Form').doc(contact.id).delete()
-//}
-//<div>
-//<button onClick={deleteContact}>Eliminar</button>
-//</div>
-
 
 const ContactView = () => {
   const contact = Contact()
 
   return (
     <div>
-      {contact.map((Contact, i) =>
+      {contact.map((items, i) =>
         <div key={i}>
-          <button className="btn-contact" onClick={() => { infoContact(Contact) }}> <h3>{Contact.name}</h3>
-            <p>{Contact.bank}</p></button>
+          <Link to={{
+            pathname: "/InfoContact",
+            state: { propPassed: items }
+          }}><button className="btn-contact"> <h3>{items.name}</h3>
+              <p>{items.bank}</p></button></Link>
         </div>
+
       )}
     </div>
   )
@@ -46,4 +43,3 @@ const ContactView = () => {
 export default ContactView;
 
 
-//<a href="htts://api.whatsapp.com/send?&text=https:https://datos-bancarios-e6ed7.web.app/" data-action="share/whatsapp/share">Enviar por WhatsApp</a>
