@@ -12,7 +12,7 @@
 }
 
 .input-login {
-    border: 2px solid royalblue;
+    border: 2px solid #222222;
     border-radius: 10px;
     font-size: 18px;
     padding: 10px;
@@ -38,7 +38,7 @@
     }
 
     .input-login {
-        border: 2px solid royalblue;
+        border: 2px solid #222222;
         border-radius: 10px;
         font-size: 16px;
         padding: 10px;
