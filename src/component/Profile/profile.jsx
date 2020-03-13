@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import db from '../../firebase-config';
 import './Profile.css';
 import { H3 } from '../elements/H3';
+import { Link } from 'react-router-dom';
 
 const account = [{ id: 0, name: 'Cuenta Corriente' }, { id: 1, name: 'Chequera electronica' }, { id: 2, name: 'Cuenta de ahorro' }, { id: 3, name: 'Cuenta Vista' }, { id: 4, name: 'Cuenta Rut' }];
 
@@ -38,18 +39,18 @@ const AddForm = () => {
 
   return (
     <section className="form-container">
-    <form className="bankform" onSubmit={addform}>
+      <form className="bankform" onSubmit={addform}>
         <div>
           <p className="title">Por favor, ingresa tus datos bancarios</p>
           <H3>Nombre y Apellido</H3>
-          <input
+          <input placeholder="Escribe tu nombre y apellido"
             className="input"
             type="text"
             value={name}
             onChange={(e) => setName(e.currentTarget.value)}
           />
           <H3>Rut</H3>
-          <input
+          <input placeholder="escribe tu rut"
             className="input"
             type="text"
             value={rut}
@@ -57,6 +58,7 @@ const AddForm = () => {
           />
           <H3>Correo electrónico</H3>
           <input
+            placeholder="escribe tu email"
             className="input"
             type="text"
             value={email}
@@ -95,16 +97,16 @@ const AddForm = () => {
           </select>
           <br />
           <H3>Número de cuenta</H3>
-          <input
+          <input placeholder="escribe tu número de cuenta"
             className="input"
             type="text"
             value={numberAccount}
             onChange={(e) => setNumberAccount(e.currentTarget.value)}
           />
         </div>
-        </form>
-      <button className="Btn">Guardar</button>
-      </section>
+      </form>
+      <Link to="/login"><button className="Btn">Guardar</button></Link>
+    </section>
   );
 };
 export default AddForm;
