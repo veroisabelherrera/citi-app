@@ -17,7 +17,6 @@ function App() {
   };
 
   return (
-
     <section className="App">
       {!user && <LoginScreen />}
 
